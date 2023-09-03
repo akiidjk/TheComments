@@ -2,9 +2,7 @@
 
 This extension aims to speed up and improve the style of your comments for make them totally customizable and readable
 
-<video width="720" height="240" controls>
-  <source src="assets/trailer.mov" type="video/mp4">
-</video>
+[![](http://markdown-videos-api.jorgenkh.no/youtube/vpV8ooHC6MI)](https://youtu.be/vpV8ooHC6MI)
 
 ## Features 📈
 
