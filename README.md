@@ -25,11 +25,11 @@ This extension aims to speed up and improve the style of your comments for make 
 ## Usage 📋
 
  - One line comment formatter:
-    1.  simple write the "command" with the combination you prefer
+    *  simple write the "command" with the combination you prefer
  - Multi line formatter: 
-    1. Write `//` 
-    2. Select the prefix comment 
-    3. Press ctrl+alt+z
+    * Write `//` 
+    * Select the prefix comment 
+    * Press ctrl+alt+z
 
 ## Additional commands 
 
