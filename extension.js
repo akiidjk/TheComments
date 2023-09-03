@@ -3,26 +3,13 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 
-var comment_prefix
-function activate(context) {
-    vscode.window.showInformationMessage('Extension "the-comments" active!');
-    create_keybinds()
-    const activeEditor = vscode.window.activeTextEditor;
-    const languageId = activeEditor.document.languageId;
-    vscode.window.showInformationMessage(`Activate: ${languageId}`);
+function recognize_lang(languageId){
     if(languageId == "javascript"){
         comment_prefix = "//"
     }
     else if(languageId == "python"){
         comment_prefix = "#"
     }
-    var regex_lines = null; 
-    var regex_max = null;
-    var regex_sentence_undefine = null;
-    var regex_sentence_define = null;
-    var regex_toggle = null;
-    var regex_todo= null;
-    var regex_box = null;
     if(languageId == "javascript"){
         regex_lines = /\/\/(.)(\d+)\/\//g;
         regex_max = /\/\/(.)(M)\/\//g
@@ -39,11 +26,36 @@ function activate(context) {
         regex_toggle = /#(.{2,})(\|)(\d+)(T)#/g
         regex_todo= /#(TODO|todo)(\d+)#/g
     }
+    else{
+        regex_lines = null;
+        regex_max =null;
+        regex_sentence_undefine= null;
+        regex_sentence_define= null;
+        regex_toggle= null;
+        regex_todo= null;
+    }
+}
+
+var comment_prefix
+var regex_lines = null; 
+var regex_max = null;
+var regex_sentence_undefine = null;
+var regex_sentence_define = null;
+var regex_toggle = null;
+var regex_todo= null;
+function activate(context) {
+    vscode.window.showInformationMessage('Extension "the-comments" active!');
+    create_keybinds()
+    const activeEditor = vscode.window.activeTextEditor;
+    let languageId = activeEditor.document.languageId;
+    vscode.window.showInformationMessage(`Activate: ${languageId}`);
+    
+    recognize_lang(languageId)
 
     let activate_language = vscode.commands.registerCommand('the-comments.language', function () {
         const activeEditor = vscode.window.activeTextEditor;
         if (activeEditor) {
-            const languageId = activeEditor.document.languageId;
+            languageId = activeEditor.document.languageId;
             vscode.window.showInformationMessage(`Activate: ${languageId}`);
         } else {
             vscode.window.showErrorMessage('No active document.');
@@ -56,6 +68,15 @@ function activate(context) {
     });
     context.subscriptions.push(multilines);
     
+    function onDidChangeActiveTextEditor(editor) {
+        
+    }
+    vscode.window.onDidChangeActiveTextEditor(event => {
+        const document = event.document;
+        languageId = document.languageId;
+        recognize_lang(languageId)
+    });
+
     vscode.workspace.onDidChangeTextDocument(event => {
         const document = event.document;
         const edit = new vscode.WorkspaceEdit();
@@ -109,6 +130,8 @@ function activate(context) {
         vscode.workspace.applyEdit(edit);
     });
 }
+
+
 function gen_todo(fullMatch, count){
     count = parseInt(count)
     let newText = `${comment_prefix} TODO LIST: `
@@ -247,6 +270,7 @@ module.exports = {
     activate,
     deactivate
 };
+
 
 
 
