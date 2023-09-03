@@ -2,7 +2,7 @@
 
 This extension aims to speed up and improve the style of your comments for make them totally customizable and readable
 
-[![](http://markdown-videos-api.jorgenkh.no/youtube/vpV8ooHC6MI)](https://youtu.be/vpV8ooHC6MI)
+[!](assets/trailer.mov)
 
 ## Features 📈
 
