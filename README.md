@@ -13,14 +13,14 @@ This extension aims to speed up and improve the style of your comments for make 
 ## Possibile combination ⚙️    
 ### **All value is customabile**
 
-- ```//*10//```   **Create a standard line of the character * of size 10**
-- ``` //*M//``` ** Create a line of the character * of size max in editor**
-- ``` //*HelloS//``` ** create a line with the text in the center of size 40 (20 and 20) accept number in the string**
-- ``` //*ciao20SD//```  **crea a line with the text in the center with customabile size the number in the string is not accepted**
-- ` //*_|30T//`  **create a line with toggle chartcher of size 30**
-- ```//todo10//```  or ``` //TODO10//```  **create a todo list of 10 lines**
+- `//*10//`   **Create a standard line of the character * of size 10**
+- `//*M//` ** Create a line of the character * of size max in editor**
+- `//*HelloS//` ** create a line with the text in the center of size 40 (20 and 20) accept number in the string**
+- `//*ciao20SD//`  **crea a line with the text in the center with customabile size the number in the string is not accepted**
+- `//*_|30T//`  **create a line with toggle chartcher of size 30**
+- `//todo10//`  or `//TODO10//`  **create a todo list of 10 lines**
 
-**In case of python all the // as replaced by # so** ```//*10//``` It will be written ```#*10# ```
+**In case of python all the // as replaced by # so** `//*10//` It will be written `#*10# `
 
 ## Usage 📋
 
