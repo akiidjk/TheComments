@@ -2,7 +2,9 @@
 
 This extension aims to speed up and improve the style of your comments for make them totally customizable and readable
 
-![video](assets/VIdeoTrailerTheCOmments.mov)
+<video width="720" height="240" controls>
+  <source src="assets/trailer.mov" type="video/mp4">
+</video>
 
 ## Features 📈
 
