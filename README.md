@@ -42,11 +42,17 @@ This command is used for two main things:
 
 ## Changelog
 
-Check the [CHANGELOG.md]() for any version changes.
+Check the [CHANGELOG.md](https://github.com/Retr0100/the-comments/blob/main/CHANGELOG.md) for any version changes.
 
 
 ## Reporting issues
 
-Report any issues on the github  [issues]() page. Follow the template and add as much information as possible.
+Report any issues on the github  [issues](https://github.com/Retr0100/the-comments/) page. Follow the template and add as much information as possible.
+
+
+## License
+This project is licensed under the GNUA License - see the [LICENSE](https://github.com/Retr0100/the-comments/blob/main/LICENSE
+) file for details
+
 
 
