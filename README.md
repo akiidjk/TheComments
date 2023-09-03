@@ -2,6 +2,8 @@
 
 This extension aims to speed up and improve the style of your comments for make them totally customizable and readable
 
+![video](assets/VIdeoTrailerTheCOmments.mov)
+
 ## Features 📈
 
  - Multi language Python and JS
