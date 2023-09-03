@@ -1,0 +1,47 @@
+{
+  "name": "the-comments",
+  "displayName": "The comments",
+  "description": "An exstension for create and write better comments",
+  "version": "1.0.1",
+  "publisher": "Retr0",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:the-comments.language",
+    "onCommand:the-comments.multilines"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+    {
+      "command": "the-comments.language",
+      "title": "language"
+    },
+    {
+      "command": "the-comments.multilines",
+      "title": "multilines"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js",
+    "reload":"vsce package && code --install-extension the-comments-0.0.1.vsix"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
+
+
