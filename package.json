@@ -4,6 +4,10 @@
   "description": "An exstension for create and write better comments",
   "version": "1.0.1",
   "publisher": "Retr0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Retr0100/the-comments.git"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -26,11 +30,12 @@
       "title": "multilines"
     }]
   },
+
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js",
-    "reload":"vsce package && code --install-extension the-comments-0.0.1.vsix"
+    "reload":"vsce package && code --install-extension the-comments-1.0.1.vsix"
   },
   "devDependencies": {
     "@types/vscode": "^1.81.0",
@@ -43,5 +48,4 @@
     "@vscode/test-electron": "^2.3.4"
   }
 }
-
 
