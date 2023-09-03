@@ -2,7 +2,7 @@
 
 This extension aims to speed up and improve the style of your comments for make them totally customizable and readable
 
-[!](assets/trailer.mov)
+[gif](assets/trailer.gif)
 
 ## Features 📈
 
